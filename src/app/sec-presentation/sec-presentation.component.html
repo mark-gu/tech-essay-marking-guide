@@ -1,0 +1,157 @@
+<fieldset>
+  <legend>Presentation
+    <div class="input-group-append float-right">
+      <span class="input-group-text bar">
+        <fa-icon [icon]="getOverallDecision() === 0 ? 'thumbs-up' : 'thumbs-down'"></fa-icon>
+      </span>
+      <span class="input-group-text score">{{ getOverallScore() }}</span>
+    </div>
+  </legend>
+
+  <div class="row">
+    <div class="form-group col-sm-12">
+      <label for="firstImpression" class="col-form-label">First Impression</label>
+      <div class="input-group">
+        <select class="form-control" id="firstImpression" name="firstImpression" [(ngModel)]="marking.firstImpression" required>
+          <option *ngFor="let r of template.firstImpression" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('firstImpression')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('firstImpression') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('firstImpression') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="numOfPages" class="col-form-label">Number of Pages</label>
+      <div class="input-group">
+        <select class="form-control" id="numOfPages" name="numOfPages" [(ngModel)]="marking.numOfPages" required>
+          <option *ngFor="let r of template.numOfPages" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('numOfPages')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('numOfPages') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('numOfPages') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="documentFormat" class="col-form-label">Document Format</label>
+      <div class="input-group">
+        <select class="form-control" id="documentFormat" name="documentFormat" [(ngModel)]="marking.documentFormat" required>
+          <option *ngFor="let r of template.documentFormat" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('documentFormat')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('documentFormat') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('documentFormat') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="inNarrativeFormat" class="col-form-label">Is in narrative format?</label>
+      <div class="input-group">
+        <select class="form-control" id="inNarrativeFormat" name="inNarrativeFormat" [(ngModel)]="marking.inNarrativeFormat" required>
+          <option *ngFor="let r of template.inNarrativeFormat" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('inNarrativeFormat')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('inNarrativeFormat') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('inNarrativeFormat') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="hasDiagrams" class="col-form-label">Has diagrams?</label>
+      <div class="input-group">
+        <select class="form-control" id="hasDiagrams" name="hasDiagrams" [(ngModel)]="marking.hasDiagrams" required>
+          <option *ngFor="let r of template.hasDiagrams" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('hasDiagrams')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('hasDiagrams') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('hasDiagrams') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="useSimpleIcons" class="col-form-label">Diagrams using Amazon Simple Icons?</label>
+      <div class="input-group">
+        <select class="form-control" id="useSimpleIcons" name="useSimpleIcons" [(ngModel)]="marking.useSimpleIcons" required>
+          <option *ngFor="let r of template.useSimpleIcons" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('useSimpleIcons')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('useSimpleIcons') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('useSimpleIcons') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="hasConsistentFormatting" class="col-form-label">Has Consistent Formatting?</label>
+      <div class="input-group">
+        <select class="form-control" id="hasConsistentFormatting" name="hasConsistentFormatting" [(ngModel)]="marking.hasConsistentFormatting" required>
+          <option *ngFor="let r of template.hasConsistentFormatting" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('hasConsistentFormatting')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('hasConsistentFormatting') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">Make sure AWS terms are capitalised correctly.</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="hasSpellingErrors" class="col-form-label">Has spelling errors?</label>
+      <div class="input-group">
+        <select class="form-control" id="hasSpellingErrors" name="hasSpellingErrors" [(ngModel)]="marking.hasSpellingErrors" required>
+          <option *ngFor="let r of template.hasSpellingErrors" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('hasSpellingErrors')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('hasSpellingErrors') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('hasSpellingErrors') }}</small>
+    </div>
+
+    <div class="form-group col-md-6 col-lg-4">
+      <label for="hasGrammarErrors" class="col-form-label">Has Grammar Errors?</label>
+      <div class="input-group">
+        <select class="form-control" id="hasGrammarErrors" name="hasGrammarErrors" [(ngModel)]="marking.hasGrammarErrors" required>
+          <option *ngFor="let r of template.hasGrammarErrors" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('hasGrammarErrors')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('hasGrammarErrors') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('hasGrammarErrors') }}</small>
+    </div>
+
+  </div>
+</fieldset>

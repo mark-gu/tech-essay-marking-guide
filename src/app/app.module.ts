@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MarkingSheetComponent } from './marking-sheet/marking-sheet.component';
+import { SecPresentationComponent } from './sec-presentation/sec-presentation.component';
 
 library.add(fas);
 
@@ -17,7 +18,8 @@ library.add(fas);
   declarations: [
     AppComponent,
     DashboardComponent,
-    MarkingSheetComponent
+    MarkingSheetComponent,
+    SecPresentationComponent
   ],
   imports: [
     BrowserModule,

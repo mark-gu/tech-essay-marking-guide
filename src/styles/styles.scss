@@ -1,9 +1,58 @@
 @import '~bootstrap/scss/bootstrap';
+@import './variables';
 
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948;
+.ng-untouched[required] {
+  border-left: 5px solid $warn-color;
 }
 
-.ng-invalid:not(form)  {
-  border-left: 5px solid #a94442;
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 1px solid $gray-400;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid $danger-color;
+}
+
+[data-icon="minus"] {
+  color: $warn-color;
+}
+
+[data-icon="arrow-up"],
+[data-icon="thumbs-up"] {
+  color: $success-color;
+}
+
+[data-icon="arrow-down"],
+[data-icon="thumbs-down"],
+[data-icon="times"] {
+  color: $danger-color;
+}
+
+legend {
+  .input-group-text {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+  }
+}
+
+.input-group-text {
+  &.bar>fa-icon {
+    width: 1rem;
+  }
+
+  &.score {
+    display: inline-block;
+    text-align: right;
+    width: 4rem;
+  }
 }

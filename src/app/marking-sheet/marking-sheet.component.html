@@ -1,36 +1,27 @@
 <h1>Technical Essay Marking Sheet </h1>
 
-<form *ngIf="template && marking">
+<form *ngIf="template && candidateInfo">
   <fieldset>
     <legend>Basic Information</legend>
     <div class="form-group row">
       <label for="firstName" class="col-sm-3 col-md-2 col-form-label">Full Name</label>
       <div class="col-sm-4 col-md-5">
-        <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="marking.firstName" placeholder="First Name"
-          required>
+        <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="candidateInfo.firstName" placeholder="First Name" required>
       </div>
       <div class="col">
-        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="marking.lastName" placeholder="Last Name"
-          required>
+        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="candidateInfo.lastName" placeholder="Last Name" required>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="role" class="col-sm-3 col-md-2 col-form-label">Role</label>
       <div class="col-sm-9 col-md-10">
-        <select class="form-control" id="role" name="role" [(ngModel)]="marking.role" required>
+        <select class="form-control" id="role" name="role" [(ngModel)]="candidateInfo.role" required>
           <option *ngFor="let r of template.role" [value]="r.value">{{ r.text }}</option>
         </select>
       </div>
     </div>
   </fieldset>
 
-  <fieldset>
-    <legend>Presentation</legend>
-    <div class="row">
-
-    </div>
-  </fieldset>
+  <app-sec-presentation [template]="template.presentation" [marking]="marking.presentation"></app-sec-presentation>
 </form>
-
-<button class="btn btn-primary" (click)="onClick()">Click</button>
