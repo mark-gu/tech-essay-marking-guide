@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MarkingSheetComponent } from './marking-sheet/marking-sheet.component';
 import { SecPresentationComponent } from './sec-presentation/sec-presentation.component';
+import { SecTechnicalComponent } from './sec-technical/sec-technical.component';
+import { SecArchitectureComponent } from './sec-architecture/sec-architecture.component';
 
 library.add(fas);
 
@@ -19,7 +21,9 @@ library.add(fas);
     AppComponent,
     DashboardComponent,
     MarkingSheetComponent,
-    SecPresentationComponent
+    SecPresentationComponent,
+    SecTechnicalComponent,
+    SecArchitectureComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,77 @@
+
+<fieldset>
+  <legend>Well Architected
+    <div class="input-group-append float-right">
+      <span class="input-group-text bar">
+        <fa-icon [icon]="getOverallDecision() === 0 ? 'thumbs-up' : 'thumbs-down'"></fa-icon>
+      </span>
+      <span class="input-group-text score">{{ getOverallScore() }}</span>
+    </div>
+  </legend>
+
+  <div class="row">
+    <div class="form-group col-sm-6">
+      <label for="security" class="col-form-label">Security</label>
+      <div class="input-group">
+        <select class="form-control" id="security" name="security" [(ngModel)]="marking.security" required>
+          <option *ngFor="let r of template.security" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('security')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('security') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('security') }}</small>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label for="security" class="col-form-label">Security</label>
+      <div class="input-group">
+        <select class="form-control" id="security" name="security" [(ngModel)]="marking.security" required>
+          <option *ngFor="let r of template.security" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('security')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('security') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('security') }}</small>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label for="security" class="col-form-label">Security</label>
+      <div class="input-group">
+        <select class="form-control" id="security" name="security" [(ngModel)]="marking.security" required>
+          <option *ngFor="let r of template.security" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('security')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('security') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('security') }}</small>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label for="security" class="col-form-label">Security</label>
+      <div class="input-group">
+        <select class="form-control" id="security" name="security" [(ngModel)]="marking.security" required>
+          <option *ngFor="let r of template.security" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('security')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('security') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('security') }}</small>
+    </div>
+  </div>
+</fieldset>

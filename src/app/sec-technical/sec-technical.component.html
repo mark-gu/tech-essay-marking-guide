@@ -1,0 +1,28 @@
+<fieldset>
+  <legend>Technical
+    <div class="input-group-append float-right">
+      <span class="input-group-text bar">
+        <fa-icon [icon]="getOverallDecision() === 0 ? 'thumbs-up' : 'thumbs-down'"></fa-icon>
+      </span>
+      <span class="input-group-text score">{{ getOverallScore() }}</span>
+    </div>
+  </legend>
+
+  <div class="row">
+    <div class="form-group col-sm-12">
+      <label for="isWorkableSolution" class="col-form-label">Workable Solution?</label>
+      <div class="input-group">
+        <select class="form-control" id="isWorkableSolution" name="isWorkableSolution" [(ngModel)]="marking.isWorkableSolution" required>
+          <option *ngFor="let r of template.isWorkableSolution" [value]="r.value">{{ r.text }}</option>
+        </select>
+        <div class="input-group-append">
+          <span class="input-group-text bar">
+            <fa-icon [icon]="getLookupBarLevelIcon('isWorkableSolution')"></fa-icon>
+          </span>
+          <span class="input-group-text score">{{ getLookupScore('isWorkableSolution') }}</span>
+        </div>
+      </div>
+      <small class="form-text text-muted">{{ getLookupDescription('isWorkableSolution') }}</small>
+    </div>
+  </div>
+</fieldset>

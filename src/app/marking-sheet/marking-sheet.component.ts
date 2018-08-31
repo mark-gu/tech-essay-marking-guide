@@ -82,7 +82,7 @@ export class MarkingSheetComponent implements OnInit {
           numOfPages: [
             {
               value: 1,
-              text: '<=6',
+              text: '6 or less',
               barLevel: Model.BarLevel.Meet,
               score: 0
             },
@@ -227,6 +227,38 @@ export class MarkingSheetComponent implements OnInit {
               score: -100
             }
           ]
+        },
+        technical: {
+          isWorkableSolution: [
+            {
+              value: 1,
+              text: 'Yes',
+              barLevel: Model.BarLevel.Meet,
+              score: 0
+            },
+            {
+              value: 2,
+              text: 'No',
+              barLevel: Model.BarLevel.Unacceptable,
+              score: -100
+            }
+          ]
+        },
+        architecture: {
+          security: [
+            {
+              value: 1,
+              text: 'Yes',
+              barLevel: Model.BarLevel.Meet,
+              score: 0
+            },
+            {
+              value: 2,
+              text: 'No',
+              barLevel: Model.BarLevel.Lower,
+              score: -100
+            }
+          ]
         }
       });
   }
@@ -237,6 +269,12 @@ export class MarkingSheetComponent implements OnInit {
         firstImpression: null,
         numOfPages: null,
         documentFormat: null
+      },
+      technical: {
+        isWorkableSolution: null
+      },
+      architecture: {
+        security: null
       }
     });
   }

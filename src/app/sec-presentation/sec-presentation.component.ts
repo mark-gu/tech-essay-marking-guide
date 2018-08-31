@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { MarkingSectionComponent } from '../shared/MarkingSectionComponent';
-import * as Model from '../app.model';
 
 @Component({
   selector: 'app-sec-presentation',
