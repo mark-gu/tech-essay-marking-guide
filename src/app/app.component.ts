@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as Bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'Technical Essay Marking Guide';
+
+  public bootstrap = Bootstrap;
 }

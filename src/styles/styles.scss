@@ -1,6 +1,13 @@
 @import './variables';
 @import '~bootstrap/scss/bootstrap';
 
+fieldset {
+  > legend {
+    border-top: 2px solid $gray-400;
+    padding-top: 0.75rem;
+  }
+}
+
 .ng-untouched[required] {
   border-left: 5px solid $warn-color;
 }

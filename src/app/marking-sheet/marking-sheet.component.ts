@@ -268,14 +268,18 @@ export class MarkingSheetComponent implements OnInit {
       presentation: {
         firstImpression: null,
         numOfPages: null,
-        documentFormat: null
+        documentFormat: null,
+        comments: ''
       },
       technical: {
-        isWorkableSolution: null
+        isWorkableSolution: null,
+        comments: ''
       },
       architecture: {
-        security: null
-      }
+        security: null,
+        comments: ''
+      },
+      comments: ''
     });
   }
 }

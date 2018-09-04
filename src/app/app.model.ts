@@ -43,15 +43,27 @@ export interface CandidateInfo {
 
 export interface Marking {
   presentation: MarkingForPresentation;
+  technical: MarkingForTechnical;
+  architecture: MarkingForArchitecture;
+  comments?: string;
 }
 
 export interface MarkingSection {
   overallBarLevel?: BarLevel;
   overallScore?: number;
+  comments?: string;
 }
 
 export interface MarkingForPresentation extends MarkingSection {
   firstImpression: number | null;
   numOfPages: number | null;
   documentFormat: number | null;
+}
+
+export interface MarkingForTechnical extends MarkingSection {
+  isWorkableSolution: number | null;
+}
+
+export interface MarkingForArchitecture extends MarkingSection {
+  security: number | null;
 }
